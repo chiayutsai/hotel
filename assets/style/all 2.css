@@ -524,10 +524,6 @@ video {
   height: auto;
 }
 
-*:focus {
-  outline: 0 !important;
-}
-
 body {
   overflow-x: hidden;
 }
