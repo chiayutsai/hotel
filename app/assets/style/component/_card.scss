@@ -1,0 +1,33 @@
+.card{
+    @apply flex flex-col relative  bg-white ;
+}
+.card-pill{
+    @apply rounded-lg border border-secondary overflow-hidden;
+    @screen sm{
+        @apply border-t-0 border-l-0 border-r-0;
+    }
+}
+.card__img{
+    @apply  w-full  h-full;
+    @screen sm{
+        @apply rounded-l-lg;
+    }
+}
+
+
+.card__img--pill{
+    @apply rounded-lg;
+}
+.card__body{
+    @apply flex-auto;
+}
+.card-img-overlay{
+   @apply absolute top-0 left-0 w-full rounded-lg h-full py-4 px-6;
+   background: transparent linear-gradient(270deg, #00000000 0%, #000000 100%) 0% 0%;
+}
+
+.card__comment{
+    
+  @apply flex items-center mb-2;
+}
+

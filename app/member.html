@@ -1,0 +1,172 @@
+---
+title: 會員中心
+layout: ./app/layout.ejs
+engine: ejs
+current: member
+footer: normal
+---
+<div class="container border-b border-secondary pt-20 sm:pt-24 md:border-0 lg:border-b min-h-sm  md:min-h-md">
+    <div class="grid grid-cols-12 gap-x-col gap-y-0">
+        <div data-aos="flip-right" class="col-span-12 order-1 lg:col-span-8 lg:order-none">
+
+            <h2 class="text-2xl mb-6">
+                My Bookings
+            </h2>
+            <ul class="flex mb-6">
+                <li class="mr-6"><a class="font-bold text-primary" href="">Upcoming</a></li>
+                <li><a class="font-bold " href="">Completed</a></li>
+            </ul>
+            <ul class="mb-12">
+                <li class="card card-pill    mb-6 md:pb-6">
+                    <div class="grid grid-cols-8 ">
+                        <div class="col-span-8 sm:col-span-3">
+                            <img class="card__img " src="assets/images/room1.jpg" alt="room">
+                        </div>
+                        <div class="col-span-8 sm:col-span-5">
+                            <div
+                                class="card__body  bg-secondary flex flex-col justify-between  p-6 md:flex-row sm:p-4 md:bg-transparent">
+                                <ul class="mb-6 md:mb-0">
+                                    <li class="flex mb-2">
+                                        <p class="mr-4"><span class="material-icons">
+                                                hotel
+                                            </span></p>
+                                        <p class="text-black font-bold">Rachada Hotel<br>
+                                            <span class="text-sm text-dark">Deluxe Suite with Pool</span>
+                                        </p>
+                                    </li>
+                                    <li class="flex mb-2">
+                                        <p class="mr-4"><span class="material-icons">
+                                                date_range
+
+                                            </span></p>
+                                        <p class="font-bold text-black ">17 June 2020 - 19 June 2020<br>
+                                            <span class="text-sm text-dark">2 nights・2 adults</span>
+                                        </p>
+                                    </li>
+                                    <li class="flex">
+                                        <p class="mr-4"><span class="material-icons">
+                                                attach_money
+                                            </span></p>
+                                        <p class="font-bold text-black ">TWD 4,633<br>
+                                            <span class="text-sm text-dark">includes taxes and charges</span>
+                                        </p>
+                                    </li>
+                                </ul>
+
+                                <a class="text-sm text-primary font-bold uppercase  hover:text-dark" href=""> view
+                                    details</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                </li>
+                <li class="card card-pill border-b-0">
+                    <div class="grid grid-cols-8 ">
+                        <div class="col-span-8 sm:col-span-3">
+                            <img class="card__img " src="assets/images/room4.jpg" alt="room">
+                        </div>
+                        <div class="col-span-8 sm:col-span-5">
+                            <div
+                                class="card__body  bg-secondary flex flex-col justify-between  p-6 md:flex-row sm:p-4 md:bg-transparent">
+                                <ul class="mb-6 md:mb-0">
+                                    <li class="flex mb-2">
+                                        <p class="mr-4"><span class="material-icons">
+                                                hotel
+                                            </span></p>
+                                        <p class="text-black font-bold">WOW Life Hotel<br>
+                                            <span class="text-sm text-dark">Standard Double Room</span>
+                                        </p>
+                                    </li>
+                                    <li class="flex mb-2">
+                                        <p class="mr-4"><span class="material-icons">
+                                                date_range
+
+                                            </span></p>
+                                        <p class="font-bold text-black">8 Sep 2020 - 15 Sep 2020<br>
+                                            <span class="text-sm text-dark">7 nights・2 adults</span>
+                                        </p>
+                                    </li>
+                                    <li class="flex">
+                                        <p class="mr-4"><span class="material-icons">
+                                                attach_money
+                                            </span></p>
+                                        <p class="font-bold text-black">TWD 13,084<br>
+                                            <span class="text-sm text-dark">includes taxes and charges</span>
+                                        </p>
+                                    </li>
+                                </ul>
+
+                                <a class="text-sm text-primary font-bold uppercase  hover:text-dark" href=""> view
+                                    details</a>
+                            </div>
+
+                        </div>
+
+                </li>
+            </ul>
+        </div>
+        <div data-aos="flip-left" class="col-span-12  lg:col-span-4 ">
+            <div class="flex justify-between items-center mb-4 lg:mb-6">
+                <div class="flex">
+                    <h2 class="text-2xl mr-2 sm:mr-4 lg:mr-2">
+                        Profile
+                    </h2>
+                    <p class="flex items-center bg-primary text-white text-xs rounded-full  py-1 px-2"><span
+                            class="material-icons text-white  text-sm mr-1">
+                            done
+                        </span>VERIFIED</p>
+                </div>
+
+                <a class="text-sm text-primary font-bold hover:bg-secondary" href="">EDIT</a>
+            </div>
+            <div class="bg-secondary rounded-lg p-4 mb-12 sm:p-6 ">
+                <div class="flex flex-col sm:flex-row lg:flex-col">
+                    <div class="w-full mb-6">
+                        <h4 class="mb-6">User details</h4>
+                        <div
+                            class="flex justify-between sm:justify-end sm:flex-row-reverse lg:flex-row lg:justify-between">
+                            <ul>
+
+
+                                <li class="text-dark text-sm mb-4">David Lin</li>
+                                <li class="text-dark text-sm mb-4">david0520@mail.com.tw</li>
+                                <li class="text-dark text-sm ">+886 9 32 456 789</li>
+                            </ul>
+                            <img class="relative w-16 h-16 -top-11 sm:top-0 rounded-lg sm:mr-4  lg:-top-11 lg:mr-0"
+                                src="assets/images/profile.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <h4 class="mb-6">Payment methods</h4>
+
+                        <ul class=" flex">
+
+                            <li class="w-full bg-white rounded p-4 mr-2">
+
+                                <p class="text-sm text-dark mb-1">xxxx-xxxx-7890</p>
+                                <p class="text-sm text-dark mb-1">DAVID LIN</p>
+                                <p class="flex justify-between items-center text-sm text-dark">08/2029<span
+                                        class="material-icons text-black">
+                                        credit_card
+                                    </span></p>
+                            </li>
+                            <li class="w-full flex justify-center items-center bg-white rounded p-4 ">
+                                <a href="" class="">
+                                    <span class="material-icons text-primary text-3xl hover:text-black">
+                                        add_circle
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,496 @@
+---
+title: 首頁
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+footer: normal
+---
+
+
+<div class="banner-slick h-banner mt-14 sm:mt-17">
+    <div class="flex justify-center items-center relative">
+        <img src="assets/images/index-banner.jpg" alt="" class="filter-brightness ">
+        <h2 class="absolute w-3/5  text-white text-3xl text-center font-extrabold md:text-5xl md:w-1/2">Discover
+            your
+            ideal hotel
+        </h2>
+    </div>
+    <div class="flex justify-center items-center relative">
+        <img src="assets/images/index-banner2.jpg" alt="" class="filter-brightness ">
+        <h2 class="absolute w-1/2  text-white text-center text-3xl font-extrabold  md:text-5xl">Enjoy Your
+            Vacation</h2>
+    </div>
+    <div class="flex justify-center items-center relative">
+        <img src="assets/images/index-banner3.jpg" alt="" class="filter-brightness ">
+        <h2 class="absolute  w-1/2o text-white text-3xl text-center font-extrabold  md:text-5xl">Have A Good Time
+        </h2>
+    </div>
+
+</div>
+<div class="container">
+    <div data-aos="fade-up" class="relative grid grid-cols-12 gap-col  z-3 -mt-13 mb-12 lg:mb-16">
+        <div
+            class="col-span-12 md:col-span-10 md:col-start-2  lg:col-span-12 lg:col-start-auto xl:col-span-10 xl:col-start-2 ">
+            <div class=" bg-secondary  rounded-lg p-6">
+                <form class="flex flex-col items-center lg:flex-row">
+                    <div class="dropdown w-full	 mr-0 mb-4 lg:mb-0 lg:mr-4">
+                        <a class="flex items-center bg-white  h-14 rounded  px-4 focus:bg-purple-100 focus:border focus:border-primary "
+                            href="#" data-toggle="dropdown">
+                            <p class="mr-4 "> <span class="material-icons ">
+                                    location_on
+                                </span></p>
+                            <div class="w-full js-countryInput">
+
+                                <p class="duration-500">Destination</p>
+                                <input type="text" value="" readonly class="hidden  text-sm text-dark">
+                            </div>
+
+                        </a>
+                        <ul class="dropdown-menu  mt-2">
+                            <li class="dropdown-item flex js-country">
+                                <p class="mr-2"><span class="material-icons">
+                                        grade
+                                    </span></p>
+
+                                <p class="js-countrytext" data-country="Bangkok, Thailand">Bangkok
+                                    <span class="block text-xs text-gray-500">Thailand</span>
+                                </p>
+
+                            </li>
+                            <li class="dropdown-item flex js-country">
+                                <p class="mr-2"><span class="material-icons">
+                                        grade
+                                    </span></p>
+                                <p class="js-countrytext" data-country="Osaka, Japan">Osaka
+                                    <span class="block text-xs text-gray-500">Japan</span>
+                                </p>
+
+                            </li>
+                            <li class="dropdown-item flex js-country">
+                                <p class="mr-2"><span class="material-icons">
+                                        grade
+                                    </span></p>
+                                <p class="js-countrytext" data-country="Roma, Italy">Roma
+                                    <span class="block text-xs text-gray-500">Italy</span>
+                                </p>
+
+                            </li>
+                            <li class="dropdown-item flex js-country">
+                                <p class="mr-2"><span class="material-icons">
+                                        grade
+                                    </span></p>
+                                <p class="js-countrytext" data-country="Paris, London">Paris
+                                    <span class="block text-xs text-gray-500">London</span>
+                                </p>
+
+                            </li>
+                            <li class="dropdown-item flex js-country">
+                                <p class="mr-2"><span class="material-icons">
+                                        grade
+                                    </span></p>
+                                <p class="js-countrytext" data-country="Reykjavik, Icland">Reykjavik
+                                    <span class="block text-xs text-gray-500">Icland</span>
+                                </p>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class=" w-full mr-0 mb-4 lg:mb-0 lg:mr-4">
+                        <a class="flex items-center bg-white  h-14 rounded  px-4 focus:bg-purple-100 focus:border focus:border-primary"
+                            href="#" data-toggle="date">
+                            <p class="mr-4 "> <span class="material-icons ">
+                                    date_range
+                                </span></p>
+                            <div class=" w-full js-date">
+
+                                <p class="duration-500">Check-in / Check-out</p>
+                                <input type="text" value="" readonly class="hidden w-full  text-sm text-dark">
+                            </div>
+
+                        </a>
+                    </div>
+
+                    <div class="dropdown  w-full mr-0 mb-4 lg:mb-0 lg:mr-4">
+                        <a class="flex items-center bg-white  rounded h-14  px-4 focus:bg-purple-100 focus:border focus:border-primary"
+                            href="#" data-toggle="dropdown">
+                            <p class="mr-4 "> <span class="material-icons align-bottom">
+                                    person
+                                </span></p>
+                            <div class="w-full js-quantityInput">
+
+                                <p class="duration-500">Guests</p>
+                                <input type="text" value="" readonly class="hidden w-full  text-sm text-dark">
+                            </div>
+
+                        </a>
+                        <ul class="dropdown-menu js-quantity-menu  mt-2">
+                            <li class="dropdown-item flex justify-between items-center  py-4">
+                                <p>Adult</p>
+                                <div class="form-quantity">
+                                    <button class="quantity-btn js-minus js-form-quantity"><span class="material-icons">
+                                            remove
+                                        </span></button>
+                                    <input type="number" class="text-gray-500 js-adult" name="Adult" value="0" readonly>
+                                    <button class="quantity-btn js-plus js-form-quantity"><span class="material-icons">
+                                            add
+                                        </span>
+                                    </button>
+
+                                </div>
+
+                            </li>
+                            <li class="dropdown-item flex justify-between items-center  py-4">
+                                <p>Child</p>
+                                <div class="form-quantity">
+                                    <button class="quantity-btn js-minus js-form-quantity"><span class="material-icons">
+                                            remove
+                                        </span></button>
+                                    <input type="number" class="text-gray-500 js-child" name="Child" value="0" readonly>
+                                    <button class="quantity-btn js-plus js-form-quantity"><span class="material-icons">
+                                            add
+                                        </span>
+                                    </button>
+
+                                </div>
+
+                            </li>
+                            <li class="dropdown-item quantity-item flex justify-between items-center py-4">
+                                <p>Room</p>
+                                <div class="form-quantity">
+                                    <button class="quantity-btn js-minus js-form-quantity"><span class="material-icons">
+                                            remove
+                                        </span></button>
+                                    <input type="number" class="text-gray-500 js-room" name="Room" value="1" readonly>
+                                    <button class=" quantity-btn js-plus js-form-quantity"><span class="material-icons">
+                                            add
+                                        </span>
+                                    </button>
+
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="result.html" class="w-full btn btn-primary  lg:w-auto">SEARCH</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <h2 data-aos="fade-up" data-aos-delay="200" class="text-2xl  mb-6 md:text-3xl">Top Choices</h2>
+    <ul data-aos="fade-up" data-aos-delay="400" class="flex mb-6">
+        <li><a href=""
+                class="text-xl font-bold font-Raleway text-primary border-b-2 pb-0.5 px-4 md:text-2xl md:px-6">Bali<sup>128</sup></a>
+        </li>
+        <li><a href=""
+                class="text-xl   font-bold font-Raleway text-dark border-b-2 border-secondary pb-0.5 px-4 hover:text-primary md:text-2xl md:px-6">Okinawa<sup>67</sup></a>
+        </li>
+
+        <li><a href=""
+                class="text-xl  font-bold font-Raleway text-dark  border-b-2 border-secondary px-4 pb-0.5 hover:text-primary md:text-2xl md:px-6">Taipei<sup>53</sup></a>
+        </li>
+    </ul>
+    <ul data-aos="fade-up" data-aos-delay="600" class="card-slick  mb-12 lg:mb-17">
+        <li class="card mr-col">
+            <a href="room.html"><img class="card__img card__img--pill  mb-2" src="assets/images/top1.jpg" alt=""></a>
+            <div class="card__body">
+                <h3 class="font-sans mb-2"><a href="room.html" class="hover:text-primary">Hotel Aqua</a> </h3>
+                <div class="card__comment">
+                    <p class=" text-sm  leading-none">
+                        <span class="material-icons text-black text-lg">
+                            grade grade grade grade grade
+                        </span>
+
+                        5.0
+                    </p>
+                    <p class="text-xs text-light">
+
+                        ・2k reviews
+                    </p>
+                </div>
+                <p class="text-sm">TWD 2,480<span class="text-xs text-light line-through ml-2">TWD
+                        3,980</span></p>
+            </div>
+
+        </li>
+        <li class="card mr-col">
+            <a href="room.html"><img class="card__img card__img--pill  mb-2" src="assets/images/top2.jpg" alt=""></a>
+            <div class="card__body">
+                <h3 class="font-sans mb-2"><a href="room.html" class="hover:text-primary">Mr. Kawasaki Inn</a> </h3>
+                <div class="card__comment">
+                    <p class=" text-sm  leading-none">
+                        <span class="material-icons text-black text-lg">
+                            grade grade grade grade
+                        </span>
+                        4.0
+                    </p>
+                    <p class="text-xs text-light">
+
+                        ・500 reviews
+                    </p>
+                </div>
+                <p class=" text-sm">TWD 3,380</p>
+            </div>
+        </li>
+        <li class="card mr-col">
+            <a href="room.html"><img class="card__img card__img--pill  mb-2" src="assets/images/top3.jpg" alt=""></a>
+            <div class="card__body">
+                <h3 class="font-sans mb-2"><a href="room.html" class="hover:text-primary">Weekly Paradise</a> </h3>
+                <div class="card__comment">
+                    <p class=" text-sm  leading-none">
+                        <span class="material-icons text-black text-lg">
+                            grade grade grade grade
+                        </span>
+                        4.0
+                    </p>
+                    <p class="text-xs text-light">
+                        ・470 reviews
+                    </p>
+                </div>
+                <p class=" text-sm">TWD 4,780</p>
+            </div>
+        </li>
+        <li class="card mr-col">
+            <a href="room.html"><img class="card__img card__img--pill  mb-2" src="assets/images/top4.jpg" alt=""></a>
+            <div class="card__body">
+                <h3 class="font-sans mb-2"><a href="room.html" class="hover:text-primary">Beast Hotel</a> </h3>
+                <div class="card__comment">
+                    <p class=" text-sm  leading-none">
+                        <span class="material-icons text-black text-lg">
+                            grade grade grade grade
+                        </span>
+                        4.0
+                    </p>
+                    <p class="text-xs text-light">
+                        ・283 reviews
+                    </p>
+                </div>
+                <p class=" text-sm">TWD 1,980</p>
+            </div>
+        </li>
+        <li class="card mr-col">
+            <a href="room.html"><img class="card__img card__img--pill  mb-2" src="assets/images/top1.jpg" alt=""></a>
+            <div class="card__body">
+                <h3 class="font-sans mb-2"><a href="room.html" class="hover:text-primary">Hotel Aqua</a> </h3>
+                <div class="card__comment">
+                    <p class=" text-sm  leading-none">
+                        <span class="material-icons text-black text-lg">
+                            grade grade grade grade grade
+                        </span>
+
+                        5.0
+                    </p>
+                    <p class="text-xs text-light">
+
+                        ・2k reviews
+                    </p>
+                </div>
+                <p class="text-sm">TWD 2,480<span class="text-xs text-light line-through ml-2">TWD
+                        3,980</span></p>
+            </div>
+
+        </li>
+        <li class="card mr-col">
+            <a href="room.html"><img class="card__img card__img--pill  mb-2" src="assets/images/top2.jpg" alt=""></a>
+            <div class="card__body">
+                <h3 class="font-sans mb-2"><a href="room.html" class="hover:text-primary">Mr. Kawasaki Inn</a> </h3>
+                <div class="card__comment">
+                    <p class=" text-sm  leading-none">
+                        <span class="material-icons text-black text-lg">
+                            grade grade grade grade
+                        </span>
+                        4.0
+                    </p>
+                    <p class="text-xs text-light">
+
+                        ・500 reviews
+                    </p>
+                </div>
+                <p class=" text-sm">TWD 3,380</p>
+            </div>
+        </li>
+    </ul>
+
+    <h2 data-aos="fade-up" class="text-2xl  mb-6 md:text-3xl">Popular Destinations</h2>
+    <ul data-aos="fade-up"
+        class="grid grid-cols-1 gap-x-col gap-y-2  mb-12 sm:grid-cols-2 sm:gap-y-6 lg:grid-cols-3 lg:mb-17 ">
+        <li class="card">
+            <img class="card__img card__img--pill" src="assets/images/overlay1.jpg" alt="">
+            <div class="card-img-overlay flex justify-between items-center">
+                <div class="card__body">
+                    <p class="text-xs text-white opacity-60">JAPAN</p>
+                    <h4 class="text-2xl text-white">Osaka</h4>
+                </div>
+                <a href="">
+                    <span class="material-icons text-white">
+                        keyboard_arrow_down
+                    </span>
+                </a>
+            </div>
+        </li>
+        <li class="card">
+            <img class="card__img card__img--pill" src="assets/images/overlay2.jpg" alt="">
+            <div class="card-img-overlay flex justify-between items-center">
+                <div class="card__body">
+                    <p class="text-xs text-white opacity-60">JAPAN</p>
+                    <h4 class="text-2xl text-white">Kyoto</h4>
+                </div>
+                <a href="">
+                    <span class="material-icons text-white">
+                        keyboard_arrow_down
+                    </span>
+                </a>
+            </div>
+        </li>
+        <li class="card">
+            <img class="card__img card__img--pill" src="assets/images/overlay3.jpg" alt="">
+            <div class="card-img-overlay flex justify-between items-center">
+                <div class="card__body">
+                    <p class="text-xs text-white opacity-60">iceland</p>
+                    <h4 class="text-2xl text-white">Reykjavík</h4>
+                </div>
+                <a href="">
+                    <span class="material-icons text-white">
+                        keyboard_arrow_down
+                    </span>
+                </a>
+            </div>
+        </li>
+        <li class="card">
+            <img class="card__img card__img--pill" src="assets/images/overlay4.jpg" alt="">
+            <div class="card-img-overlay flex justify-between items-center">
+                <div class="card__body">
+                    <p class="text-xs text-white opacity-60">France</p>
+                    <h4 class="text-2xl text-white">Paris</h4>
+                </div>
+                <a href="">
+                    <span class="material-icons text-white">
+                        keyboard_arrow_down
+                    </span>
+                </a>
+            </div>
+        </li>
+        <li class="card">
+            <img class="card__img card__img--pill" src="assets/images/overlay5.jpg" alt="">
+            <div class="card-img-overlay flex justify-between items-center">
+                <div class="card__body">
+                    <p class="text-xs text-white opacity-60">Italy</p>
+                    <h4 class="text-2xl text-white">Roma</h4>
+                </div>
+                <a href="">
+                    <span class="material-icons text-white">
+                        keyboard_arrow_down
+                    </span>
+                </a>
+            </div>
+        </li>
+        <li class="card">
+            <img class="card__img card__img--pill" src="assets/images/overlay6.jpg" alt="">
+            <div class="card-img-overlay flex justify-between items-center">
+                <div class="card__body">
+                    <p class="text-xs text-white opacity-60">Thailand</p>
+                    <h4 class="text-2xl text-white">Bangkok</h4>
+                </div>
+                <a href="">
+                    <span class="material-icons text-white">
+                        keyboard_arrow_down
+                    </span>
+                </a>
+            </div>
+        </li>
+    </ul>
+    <div data-aos="fade-up" class="flex justify-between items-center mb-6">
+        <h2 class="text-2xl md:text-3xl ">Get Inspiration</h2>
+        <a href="" class=" btn btn-sm btn-outline-primary ">SEE
+            MORE</a>
+    </div>
+    <ul class="card-noarrow-slick mb-12 lg:mb-17">
+        <li data-aos="flip-left" class="card mr-col">
+            <img class="card__img card__img--pill mb-5 md:mb-6" src="assets/images/card1.jpg
+            " alt="">
+            <div class="card__body">
+                <h3 class="text-xl   mb-2 md:text-2xl">The fifth most visited country</h3>
+
+                <p class="text-xs md:text-base">Italy is the fifth most visited country in the world, with a total of
+                    52.3
+                    million…</p>
+            </div>
+
+        </li>
+        <li data-aos="flip-left" data-aos-delay="200" class="card mr-col">
+            <img class="card__img card__img--pill  mb-5 md:mb-6" src="assets/images/card2.jpg" alt="">
+            <div class="card__body">
+                <h3 class="text-xl   mb-2 md:text-2xl">Visit Thailand for Bangkok</h3>
+
+                <p class="text-xs md:text-base">Asian tourists primarily visit Thailand for Bangkok and the historical,
+                    natural,
+                    and…</p>
+            </div>
+        </li>
+        <li data-aos="flip-left" data-aos-delay="400" class="card mr-col">
+            <img class="card__img card__img--pill mb-6" src="assets/images/card3.jpg" alt="">
+            <div class="card__body">
+                <h3 class="text-xl   mb-2 md:text-2xl">Lord of the Rings Tour</h3>
+
+                <p class="text-xs md:text-base">The national cuisine has been described as Pacific Rim, incorporating
+                    the…</p>
+            </div>
+        </li>
+
+    </ul>
+</div>
+<div class="bg-secondary py-6 md:py-23">
+    <div class="container">
+        <div class=" grid grid-cols-12 gap-x-col gap-y-0">
+            <div data-aos="fade-up" class="col-span-12  mb-4 md:mb-6 lg:col-span-8 lg:col-start-3">
+                <h3 class="text-2xl font-bold text-center md:text-5xl md:font-extrabold">Subscribe for Exclusive Offer
+                </h3>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200"
+                class="col-span-12 md:col-span-10 md:col-start-2 lg:col-span-6 lg:col-start-4">
+                <form action="">
+                    <div class="form-inline ">
+                        <input type="email" value="" placeholder="Your email address"
+                            class="form-control  js-subscribe-input">
+                        <a href="" type="submit" class="btn btn-primary  rounded-l-none js-subscribe">SUBSCRIBE</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="alert js-fail js-subscribe-focus">
+    <div class="alert-dialog alert-danger">
+        <div class="alert-header">
+            <p><span class="material-icons alert-icon">
+                    error
+                </span></p>
+            <button class="alert-close ">
+                <span class="material-icons">close</span>
+            </button>
+        </div>
+
+        <p class="alert-text">請輸入您的電子郵件</p>
+        <button class="btn btn-sm btn-danger w-full  js-alert-close">OK</button>
+
+    </div>
+
+</div>
+<div class="alert js-success">
+    <div class="alert-dialog alert-success">
+        <div class="alert-header">
+            <p><span class="material-icons alert-icon">
+                    check_circle
+                </span></p>
+            <button class="alert-close js-alert-close">
+                <span class="material-icons">close</span>
+            </button>
+        </div>
+
+        <p class="alert-text">感謝您的訂閱</p>
+        <button class="btn btn-sm btn-primary w-full js-alert-close">Thank You</button>
+
+    </div>
+
+</div>
