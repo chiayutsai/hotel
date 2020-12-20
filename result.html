@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    搜尋房型
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  
+  <nav class="navber ">
+    <div class="container flex justify-between items-center">
+        <div class="navbar-toggle" data-toggle="collapse">
+            <div class="navbar-togglebtn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <h1><a class="navbar-brand" href="index.html">ALOHA</a>
+        </h1>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class=" nav-item dropdown">
+                    <a class="nav-link leading-none " href="#" data-toggle="dropdown">
+                        <span class="material-icons">
+                            language
+                        </span>
+                        <span class="material-icons">
+                            arrow_drop_down
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu">
+
+                        <li class="dropdown-item"> <a href="#">English</a> </li>
+                        <li class="dropdown-item"> <a href="#">繁體中文</a> </li>
+                        <li class="dropdown-item"> <a href="#">簡體中文</a> </li>
+
+                    </ul>
+                </li>
+                <li class="nav-item "><a class="nav-link" href="">Sign up</a></li>
+                <li class="nav-item hidden sm:block"><a class="nav-link" href="login.html">Login</a></li>
+            </ul>
+        </div>
+        <a href="login.html" class="hover:text-primary sm:hidden">Login</a>
+    </div>
+</nav>
+  
+
+
+
+  
+
+<div data-aos="fade-down" class="sticky top-14 z-3 bg-secondary py-2  mt-14 mb-4 sm:top-17   sm:mt-17  md:py-6 md:mb-6">
+    <div class="container">
+        <form class="flex  items-center">
+            <div class="dropdown  w-full border-r border-white md:border-0	md:mr-2 lg:mr-4">
+                <a class="flex items-center h-8  rounded  px-2 focus:bg-purple-100 focus:border focus:border-primary md:bg-white md:h-14 lg:px-4 "
+                    href="#" data-toggle="dropdown">
+                    <p class="hidden mr-2  md:inline-flex lg:mr-4"> <span class="material-icons">
+                            location_on
+                        </span></p>
+                    <div class="w-full js-countryInput">
+
+                        <p class="hidden text-xs uppercase font-bold text-black duration-500 md:block">Destination</p>
+                        <input type="text" readonly value="Bangkok, Thailand"
+                            class="text-sm text-center text-dark md:text-left">
+                    </div>
+
+                </a>
+                <ul class="dropdown-menu w-full shadow-sm mt-2">
+                    <li class="dropdown-item flex js-country">
+                        <p class="mr-2"><span class="material-icons">
+                                grade
+                            </span></p>
+
+                        <p class="js-countrytext" data-country="Bangkok, Thailand">Bangkok
+                            <span class="block text-xs text-gray-500">Thailand</span>
+                        </p>
+
+                    </li>
+                    <li class="dropdown-item flex js-country">
+                        <p class="mr-2"><span class="material-icons">
+                                grade
+                            </span></p>
+                        <p class="js-countrytext" data-country="Osaka, Japan">Osaka
+                            <span class="block text-xs text-gray-500">Japan</span>
+                        </p>
+
+                    </li>
+                    <li class="dropdown-item flex js-country">
+                        <p class="mr-2"><span class="material-icons">
+                                grade
+                            </span></p>
+                        <p class="js-countrytext" data-country="Roma, Italy">Roma
+                            <span class="block text-xs text-gray-500">Italy</span>
+                        </p>
+
+                    </li>
+                    <li class="dropdown-item flex js-country">
+                        <p class="mr-2"><span class="material-icons">
+                                grade
+                            </span></p>
+                        <p class="js-countrytext" data-country="Paris, London">Paris
+                            <span class="block text-xs text-gray-500">London</span>
+                        </p>
+
+                    </li>
+                    <li class="dropdown-item flex js-country">
+                        <p class="mr-2"><span class="material-icons">
+                                grade
+                            </span></p>
+                        <p class="js-countrytext" data-country="Reykjavik, Icland">Reykjavik
+                            <span class="block text-xs text-gray-500">Icland</span>
+                        </p>
+
+                    </li>
+                </ul>
+            </div>
+            <div class=" w-full border-r border-white md:border-0 md:mr-2 lg:mr-4">
+                <a class="flex items-center h-8 rounded  px-2 focus:bg-purple-100 focus:border focus:border-primary md:bg-white  md:h-14  lg:px-4 "
+                    href="#" data-toggle="date">
+                    <p class="hidden mr-2 md:inline-flex lg:mr-4 "> <span class="material-icons">
+                            date_range
+                        </span></p>
+                    <div class="w-full js-date">
+
+                        <p class="hidden text-xs uppercase font-bold text-black duration-500 md:block">Check-in / out
+                        </p>
+                        <input type="text" value="16/December - 19/December" readonly class=" w-full  text-sm text-center text-dark
+                             md:text-left">
+                    </div>
+
+                </a>
+            </div>
+
+            <div class="dropdown  w-full md:mr-2 lg:mr-4">
+                <a class="flex items-center  rounded h-8  px-2 focus:bg-purple-100 focus:border focus:border-primary md:bg-white  md:h-14  lg:px-4  "
+                    href="#" data-toggle="dropdown">
+                    <p class="hidden mr-2 md:inline-flex lg:mr-4"> <span class="material-icons">
+                            person
+                        </span></p>
+                    <div class="w-full js-quantityInput">
+
+                        <p class="hidden text-xs uppercase font-bold text-black duration-500 md:block">Guests</p>
+                        <input type="text" value="2 adults・1 room" readonly
+                            class=" w-full text-center text-sm text-dark md:text-left">
+                    </div>
+
+                </a>
+                <ul class="dropdown-menu js-quantity-menu  mt-2">
+                    <li class="dropdown-item flex  flex-col  justify-between items-center  py-4 md:flex-row">
+                        <p>Adult</p>
+                        <div class="form-quantity">
+                            <button class="quantity-btn js-minus js-form-quantity"><span class="material-icons">
+                                    remove
+                                </span></button>
+                            <input type="number" class="text-gray-500 js-adult" name="Adult" value="2" readonly>
+                            <button class="quantity-btn js-plus js-form-quantity"><span class="material-icons">
+                                    add
+                                </span>
+                            </button>
+
+                        </div>
+
+                    </li>
+                    <li class="dropdown-item flex  flex-col   justify-between items-center  py-4  md:flex-row">
+                        <p>Child</p>
+                        <div class="form-quantity">
+                            <button class="quantity-btn js-minus js-form-quantity"><span class="material-icons">
+                                    remove
+                                </span></button>
+                            <input type="number" class="text-gray-500 js-child" name="Child" value="0" readonly>
+                            <button class="quantity-btn js-plus js-form-quantity"><span class="material-icons">
+                                    add
+                                </span>
+                            </button>
+
+                        </div>
+
+                    </li>
+                    <li
+                        class="dropdown-item quantity-item flex flex-col justify-between items-center py-4  md:flex-row">
+                        <p>Room</p>
+                        <div class="form-quantity">
+                            <button class="quantity-btn js-minus js-form-quantity"><span class="material-icons">
+                                    remove
+                                </span></button>
+                            <input type="number" class="text-gray-500 js-room" name="Room" value="1" readonly>
+                            <button class=" quantity-btn js-plus js-form-quantity"><span class="material-icons">
+                                    add
+                                </span>
+                            </button>
+
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+            <a href="result.html"
+                class="hidden bg-primary text-white text-center font-bold rounded py-4 px-8  hover:bg-purple-900 hover:shadow-lg hover:shadow-inner md:inline-flex">SEARCH</a>
+        </form>
+    </div>
+</div>
+<div class="container relative">
+    <div class="grid grid-cols-12 gap-x-col gap-y-6 mb-12  lg:mb-17 ">
+        <div data-aos="fade-right" class="col-span-12  md:col-span-4 md:order-none">
+            <h2 class="text-3xl text-center md:text-left">Bangkok<sup class="text-primary">3,240</sup></h2>
+        </div>
+
+        <div data-aos="fade-left" class="col-span-6 order-1 self-end md:col-span-8 md:order-none">
+            <a class=" font-bold text-center text-sm hover:text-primary  md:hidden js-sort" href=""><span
+                    class="material-icons mr-2">
+                    sort
+                </span>SORT</a>
+            <ul data-toggle="sort"
+                class="hidden absolute z-2 left-3.8 top-24  flex-wrap w-p-screen  rounded-lg bg-secondary px-6 py-4  md:static md:flex md:w-auto md:bg-transparent md:p-0">
+                <li class=" py-4 md:p-0 md:mr-6"><a href="" class="font-bold text-primary">Recommended</a></li>
+                <li class=" py-4 md:p-0 md:mr-6"><a href="" class="font-bold hover:text-primary">Lowest Price</a></li>
+                <li class=" py-4 md:p-0 md:mr-6"><a href="" class="font-bold hover:text-primary">Best value</a></li>
+                <li class=" py-4 md:p-0"><a href="" class="font-bold hover:text-primary">Distance to City Center </a>
+                </li>
+            </ul>
+        </div>
+        <div data-aos="fade-right" class="col-span-6 order-0 md:col-span-4 md:order-none  ">
+            <a class=" font-bold text-center text-sm border-r border-secondary hover:text-primary   md:hidden js-filter"
+                href=""><span class="material-icons  mr-2">
+                    filter_list
+                </span>FILTER</a>
+            <div data-toggle="filter"
+                class="fixed z-5 left-0 top-0 w-screen h-0 bg-secondary duration-1000 overflow-y-auto md:relative md:h-auto  md:w-auto md:bg-transparent md:z-auto">
+                <div class="sticky flex justify-between  top-0 bg-white  p-4 md:hidden ">
+                    <p class="font-bold text-sm"><span class="material-icons   mr-2">
+                            filter_list
+                        </span>FILTER</p>
+                    <a class="js-close" href=""><span class="material-icons">
+                            close
+                        </span></a>
+                </div>
+                <div class=" bg-secondary px-4  py-6  md:rounded-lg md:p-6">
+
+                    <form action="">
+                        <div class="border-b border-white pb-4 mb-6">
+                            <h3 class="mb-4">Deals</h3>
+                            <div class="form-check">
+
+                                <input id="free" type="checkbox" class="form-checkbox ">
+                                <label for="free">Free cancellation</label>
+
+                            </div>
+                            <div class="form-check">
+                                <input id="no" type="checkbox" class="form-checkbox ">
+                                <label for="no">No prepayment</label>
+
+                            </div>
+                            <div class="form-check">
+                                <input id="special" type="checkbox" class="form-checkbox ">
+                                <label for="special">Special offers</label>
+
+                            </div>
+                        </div>
+                        <div class="border-b border-white pb-4 mb-6">
+                            <h3 class="mb-4">Popular filter</h3>
+                            <div class="form-check">
+
+                                <input id="Breakfast" type="checkbox" class="form-checkbox ">
+                                <label for="Breakfast">Breakfast included</label>
+
+                            </div>
+                            <div class="form-check">
+                                <input id="wifi" type="checkbox" class="form-checkbox ">
+                                <label for="wifi">Free Wi-Fi</label>
+
+                            </div>
+                            <div class="form-check">
+                                <input id="swim" type="checkbox" class="form-checkbox ">
+                                <label for="swim">Swimming pool</label>
+
+                            </div>
+                        </div>
+                        <div class="border-b border-white pb-4 mb-6">
+                            <h3 class="mb-4">Budget</h3>
+                            <div id="slider-range" class="mx-2 mb-4"></div>
+                            <div class="flex items-center mb-2 js-range ">
+                                <div class="bg-white rounded  p-2 ">
+                                    <p class="text-xs text-black font-bold">MIN PRICE</p>
+                                    <input type="text" readonly class="w-full text-sm text-dark js-min">
+                                </div>
+                                <p class="md:hidden mx-2 lg:inline-flex">-</p>
+                                <div class="bg-white rounded p-2 js-max">
+                                    <p class="text-xs text-black font-bold">MAX PRICE</p>
+                                    <input type="text" readonly class="w-full text-sm text-dark js-max">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="border-b border-white pb-4 mb-6">
+                            <h3 class="mb-4">Rating</h3>
+                            <div class="form-check">
+                                <input id="5" type="checkbox" class="form-checkbox ">
+                                <label for="5"> <span class="material-icons">
+                                        grade grade grade grade grade
+                                    </span>5.0</label>
+
+                            </div>
+                            <div class="form-check">
+                                <input id="4" type="checkbox" class="form-checkbox ">
+                                <label for="4"> <span class="material-icons">
+                                        grade grade grade grade
+                                    </span>4.0</label>
+
+                            </div>
+                            <div class="form-check">
+                                <input id="3" type="checkbox" class="form-checkbox ">
+                                <label for="3"> <span class="material-icons">
+                                        grade grade grade
+                                    </span>3.0</label>
+
+                            </div>
+                            <div class="form-check">
+                                <input id="2" type="checkbox" class="form-checkbox ">
+                                <label for="2"> <span class="material-icons">
+                                        grade grade
+                                    </span>2.0</label>
+
+                            </div>
+                            <div class="form-check">
+                                <input id="1" type="checkbox" class="form-checkbox ">
+                                <label for="1"> <span class="material-icons">
+                                        grade
+                                    </span>1.0</label>
+
+                            </div>
+                            <div class="form-check">
+                                <input id="Unrated" type="checkbox" class="form-checkbox ">
+                                <label for="Unrated">Unrated</label>
+
+                            </div>
+                        </div>
+
+                        <h3 class="mb-4">Stay type</h3>
+                        <div class="form-check">
+
+                            <input id="Hotel" type="checkbox" class="form-checkbox ">
+                            <label for="Hotel">Hotel</label>
+
+                        </div>
+                        <div class="form-check">
+                            <input id="Apartment" type="checkbox" class="form-checkbox ">
+                            <label for="Apartment">Apartment</label>
+
+                        </div>
+                        <div class="form-check">
+                            <input id="Unique" type="checkbox" class="form-checkbox ">
+                            <label for="Unique">Unique</label>
+
+                        </div>
+                        <div class="form-check mb-0">
+                            <input id="Hostel" type="checkbox" class="form-checkbox ">
+                            <label for="Hostel">Hostel</label>
+
+                        </div>
+
+                    </form>
+                </div>
+                <div class="sticky bottom-0 bg-gray-900 rounded-t-lg px-4  py-6 md:hidden">
+                    <h5 class="text-2xl text-white text-opacity-75 mb-6">Find 1,245 results</h5>
+                    <div class="flex justify-between">
+                        <a href="" class="btn btn-outline-white w-full font-bold mr-2">CLEAR</a>
+                        <a href="" class="btn btn-primary w-full font-bold">FILTER</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-span-12 order-2 md:col-span-8 md:order-none self-start">
+            <ul class="bg-secondary -mx-3.8 mb-4 sm:bg-white sm:mx-0  md:mb-6 lg:mb-12 ">
+                <li data-aos="fade-up"
+                    class="card  mb-1 sm:border-b sm:border-secondary sm:pb-4 sm:mb-4 lg:pb-6 lg:mb-6 group js__card--hover">
+                    <div class="grid grid-cols-8">
+                        <div class="col-span-3">
+                            <div class="card__imgSlick ">
+                                <img class="card__img 
+                    " src="assets/images/room1.jpg" alt="">
+                                <img class="card__img 
+                    " src="assets/images/room2.jpg" alt="">
+                                <img class="card__img
+                    " src="assets/images/room3.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-span-5">
+                            <div class="relative h-full  py-1 p-2 sm:group-hover:shadow-lg  xl:p-4">
+                                <div class="flex flex-col justify-between sm:flex-row">
+                                    <div class="mb-1 sm:mb-2 lg:mb-4">
+                                        <p class="text-xs text-primary">Rachada, Bangkok<span
+                                                class="hidden text-dark xl:inline-flex">・2 km
+                                                from center</span>
+                                        </p>
+                                        <h3 class="group-hover:underline group-hover:underline-dark  lg:text-2xl">
+                                            <a href="room.html" class="hover:text-primary ">Rachada
+                                                Hotel</a> </h3>
+                                    </div>
+                                    <p
+                                        class=" inline-flex flex-row text-xs sm:flex-col sm:text-right  lg:text-sm xl:flex-row">
+                                        <span class="material-icons text-lg">
+                                            grade grade grade grade
+                                        </span>
+                                        4.0 (283)
+                                    </p>
+
+
+                                </div>
+
+                                <p class="text-sm font-bold lg:mb-1">Deluxe Double Room</p>
+                                <p class="text-xs mb-2  lg:mb-4">2 guests・1 bed (Queen size)</p>
+                                <ul class=" hidden  flex-col sm:inline-flex lg:flex-row">
+                                    <li class="mb-1 lg:mr-1 lg:mb-0"><a
+                                            class="text-xs text-dark bg-secondary rounded-full py-1 px-2 hover:text-primary"
+                                            href="">Free
+                                            cancellation</a>
+                                    </li>
+                                    <li><a href=""
+                                            class="text-xs text-dark bg-secondary rounded-full py-1 px-2 hover:text-primary">No
+                                            prepayment</a>
+                                    </li>
+                                </ul>
+
+                                <div
+                                    class="text-right bottom:1 md:absolute md:right-2 md:bottom-2 lg:right-4 lg:bottom-4">
+                                    <p class="hidden text-xs  sm:block">per night</p>
+                                    <h5 class="lg:text-2xl">TWD 1,980</h5>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-aos="fade-up"
+                    class="card mb-1 sm:border-b sm:border-secondary sm:pb-4 sm:mb-4 lg:pb-6 lg:mb-6 group js__card--hover">
+                    <div class="grid grid-cols-8">
+                        <div class="col-span-3">
+                            <div class="card__imgSlick">
+                                <img class="card__img
+                " src="assets/images/room2.jpg" alt="">
+                                <img class="card__img
+                " src="assets/images/room3.jpg" alt="">
+                                <img class="card__img 
+                " src="assets/images/room4.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-span-5">
+                            <div class="relative h-full  py-1 p-2 sm:group-hover:shadow-lg  xl:p-4">
+                                <div class="flex flex-col justify-between sm:flex-row">
+                                    <div class="mb-1 sm:mb-2 lg:mb-4">
+                                        <p class="text-xs text-primary">Phaya Thai, Bangkok<span
+                                                class="hidden text-dark xl:inline-flex">・2.9 km from center</span>
+                                        </p>
+                                        <h3 class="group-hover:underline group-hover:underline-dark lg:text-2xl"><a
+                                                href="room.html" class="hover:text-primary ">Forever Place</a>
+                                        </h3>
+                                    </div>
+                                    <p
+                                        class=" inline-flex flex-row  text-xs sm:flex-col sm:text-right  lg:text-sm xl:flex-row">
+                                        <span class="material-icons text-lg">
+                                            grade grade grade grade grade
+                                        </span>
+                                        5.0 (121)
+                                    </p>
+
+
+                                </div>
+
+
+                                <p class="text-sm font-bold lg:mb-1">Standard Double Room</p>
+                                <p class="text-xs mb-2  lg:mb-4">2 guests・1 bed (Queen size)</p>
+                                <ul class=" hidden  flex-col sm:inline-flex lg:flex-row">
+                                    <li><a class="text-xs text-dark  bg-secondary rounded-full py-1 px-2 hover:text-primary"
+                                            href="">Free
+                                            cancellation</a>
+                                    </li>
+
+                                </ul>
+
+                                <div
+                                    class="text-right bottom:1 md:absolute md:right-2 md:bottom-2 lg:right-4 lg:bottom-4">
+                                    <p class="hidden text-xs sm:block  lg:mb-1">per night</p>
+                                    <p class="text-xs line-through  sm:text-sm lg:text-base  lg:mb-1">TWD 1,980
+                                    </p>
+                                    <h5 class="lg:text-2xl">TWD <span class="text-primary">1,680</span></h5>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-aos="fade-up"
+                    class="card mb-1 sm:border-b sm:border-secondary sm:pb-4 sm:mb-4 lg:pb-6 lg:mb-6 group js__card--hover">
+                    <div class=" grid grid-cols-8">
+                        <div class="col-span-3">
+                            <div class="card__imgSlick  ">
+                                <img class="card__img" src="assets/images/room3.jpg" alt="">
+                                <img class="card__img" src="assets/images/room4.jpg" alt="">
+                                <img class="card__img  " src="assets/images/room5.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-span-5">
+                            <div class="relative h-full  py-1 p-2 sm:group-hover:shadow-lg xl:p-4">
+                                <div class="flex flex-col justify-between sm:flex-row">
+                                    <div class="mb-1 sm:mb-2 lg:mb-4">
+                                        <p class="text-xs text-primary">Bangkapi, Bangkok<span
+                                                class=" hidden text-dark xl:inline-flex">・14 km from center</span>
+                                        </p>
+                                        <h3 class="group-hover:underline group-hover:underline-dark lg:text-2xl"><a
+                                                href="room.html" class="hover:text-primary ">LUV Hotel</a>
+                                        </h3>
+                                    </div>
+                                    <p
+                                        class="inline-flex flex-row  text-xs sm:flex-col sm:text-right  lg:text-sm xl:flex-row">
+                                        <span class="material-icons text-lg">
+                                            grade grade grade grade
+                                        </span>
+                                        4.0 (325)
+                                    </p>
+
+
+                                </div>
+
+                                <p class="text-sm font-bold lg:mb-1">Standard Double Room</p>
+                                <p class="text-xs mb-2  lg:mb-4">2 guests・1 bed (Queen size)</p>
+                                <ul class=" hidden  flex-col sm:inline-flex lg:flex-row">
+                                    <li><a class="text-xs  text-dark  bg-secondary rounded-full py-1 px-2 hover:text-primary"
+                                            href="">Free
+                                            cancellation</a>
+                                    </li>
+
+                                </ul>
+
+                                <div
+                                    class="text-right bottom:1 md:absolute md:right-2 md:bottom-2 lg:right-4 lg:bottom-4">
+                                    <p class="hidden text-xs sm:block">per night</p>
+                                    <h5 class="lg:text-2xl">TWD 2,460</h5>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-aos="fade-up"
+                    class="card  mb-1 sm:border-b sm:border-secondary sm:pb-4 sm:mb-4 lg:pb-6 lg:mb-6 group js__card--hover">
+                    <div class="grid grid-cols-8">
+                        <div class="col-span-3">
+                            <div class="card__imgSlick">
+                                <img class="card__imgSlick" src="assets/images/room4.jpg" alt="">
+                                <img class="card__img " src="assets/images/room5.jpg" alt="">
+                                <img class="card__img " src="assets/images/room6.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-span-5">
+                            <div class="relative h-full  py-1 p-2 sm:group-hover:shadow-lg xl:p-4">
+                                <div class="flex flex-col justify-between sm:flex-row">
+                                    <div class="mb-1 sm:mb-2 lg:mb-4">
+                                        <p class="text-xs text-primary">Chatuchack, Bangkok<span
+                                                class="hidden text-dark xl:inline-flex">・12 km from center</span>
+                                        </p>
+                                        <h3 class=" group-hover:underline group-hover:underline-dark lg:text-2xl"><a
+                                                href="room.html" class="hover:text-primary ">WOW Life
+                                                Hotel</a>
+                                        </h3>
+                                    </div>
+                                    <p
+                                        class=" inline-flex flex-row  text-xs sm:flex-col sm:text-right  lg:text-sm xl:flex-row">
+                                        <span class="material-icons text-lg">
+                                            grade grade grade grade
+                                        </span>
+                                        4.0 (204)
+                                    </p>
+
+
+                                </div>
+
+
+                                <p class="text-sm font-bold lg:mb-1">Standard Double Room</p>
+                                <p class="text-xs mb-2  lg:mb-4">2 guests・1 bed (Queen size)</p>
+                                <ul class=" hidden  flex-col sm:inline-flex lg:flex-row">
+                                    <li><a class="text-xs text-dark bg-secondary rounded-full py-1 px-2 hover:text-primary"
+                                            href="">No
+                                            prepayment</a>
+                                    </li>
+
+                                </ul>
+
+                                <div
+                                    class="text-right bottom:1 md:absolute md:right-2 md:bottom-2 lg:right-4 lg:bottom-4">
+                                    <p class="hidden text-xs sm:block  lg:mb-1">per night</p>
+                                    <p class=" text-xs line-through sm:text-sm lg:text-base  lg:mb-1">TWD 2,880
+                                    </p>
+                                    <h5 class="lg:text-2xl">TWD <span class="text-primary">2,240</span></h5>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li data-aos="fade-up"
+                    class="card  mb-1 sm:border-b sm:border-secondary sm:pb-4 sm:mb-4 lg:pb-6 lg:mb-6 group js__card--hover">
+                    <div class="grid grid-cols-8">
+                        <div class="col-span-3">
+                            <div class="card__imgSlick">
+                                <img class="card__img " src="assets/images/room5.jpg" alt="">
+                                <img class="card__img" src="assets/images/room6.jpg" alt="">
+                                <img class="card__img  " src="assets/images/room7.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-span-5">
+                            <div class="relative h-full  py-1 p-2 sm:group-hover:shadow-lg  xl:p-4">
+                                <div class="flex flex-col justify-between sm:flex-row">
+                                    <div class="mb-1 sm:mb-2 lg:mb-4">
+                                        <p class="text-xs text-primary">Chatuchack, Bangkok<span
+                                                class="hidden text-dark xl:inline-flex">・8 km from center</span>
+                                        </p>
+                                        <h3 class=" group-hover:underline group-hover:underline-dark lg:text-2xl"><a
+                                                href="room.html" class="hover:text-primary ">Celebrity
+                                                Palace</a>
+                                        </h3>
+                                    </div>
+                                    <p
+                                        class=" inline-flex flex-rowtext-xs sm:flex-col sm:text-right  lg:text-sm xl:flex-row">
+                                        <span class="material-icons text-lg">
+                                            grade grade grade grade grade
+                                        </span>
+                                        5.0 (189)
+                                    </p>
+
+
+                                </div>
+
+
+                                <p class="text-sm font-bold lg:mb-1">Standard Double Room</p>
+                                <p class="text-xs mb-2  lg:mb-4">2 guests・1 bed (Queen size)</p>
+                                <ul class=" hidden  flex-col sm:inline-flex lg:flex-row">
+                                    <li><a class="text-xs text-dark bg-secondary rounded-full py-1 px-2 hover:text-primary"
+                                            href="">No
+                                            prepayment</a>
+                                    </li>
+
+                                </ul>
+
+                                <div
+                                    class="text-right bottom:1 md:absolute md:right-2 md:bottom-2 lg:right-4 lg:bottom-4">
+                                    <p class="hidden text-xs  sm:block  lg:mb-1">per night</p>
+                                    <p class="line-through text-xs    sm:text-sm lg:text-base  lg:mb-1">TWD 2,120
+                                    </p>
+                                    <h5 class="lg:text-2xl">TWD <span class="text-primary">1,890</span></h5>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-aos="fade-up"
+                    class="card  mb-1 sm:border-b sm:border-secondary sm:pb-4 sm:mb-4 lg:pb-6 lg:mb-6 group js__card--hover">
+                    <div class="grid grid-cols-8">
+                        <div class="col-span-3">
+                            <div class="card__imgSlick">
+                                <img class="card__img" src="assets/images/room6.jpg" alt="">
+                                <img class="card__img" src="assets/images/room7.jpg" alt="">
+                                <img class="card__img" src="assets/images/room8.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-span-5">
+                            <div class="relative h-full  py-1 p-2 sm:group-hover:shadow-lg xl:p-4">
+                                <div class="flex flex-col justify-between sm:flex-row">
+                                    <div class="mb-1 sm:mb-2 lg:mb-4">
+                                        <p class="text-xs text-primary">Rang Rak, Bangkok<span
+                                                class="hidden text-dark xl:inline-flex">・4.4 km from center</span>
+                                        </p>
+                                        <h3 class=" group-hover:underline group-hover:underline-dark lg:text-2xl"><a
+                                                href="room.html" class=" hover:text-primary ">RR Space</a>
+                                        </h3>
+                                    </div>
+                                    <p
+                                        class="inline-flex flex-row text-xs sm:flex-col sm:text-right  lg:text-sm xl:flex-row">
+                                        <span class="material-icons text-lg">
+                                            grade grade grade grade
+                                        </span>
+                                        4.0 (112)
+                                    </p>
+
+
+                                </div>
+
+                                <p class="text-sm font-bold lg:mb-1">Deluxe Double Room</p>
+                                <p class="text-xs mb-2  lg:mb-4">2 guests・1 bed (King size)</p>
+                                <ul class=" hidden  flex-col sm:inline-flex lg:flex-row">
+                                    <li><a class="text-xs text-dark bg-secondary rounded-full py-1 px-2 hover:text-primary"
+                                            href="">Free
+                                            cancellation</a>
+                                    </li>
+
+                                </ul>
+
+                                <div
+                                    class="text-right bottom:1 md:absolute md:right-2 md:bottom-2 lg:right-4 lg:bottom-4">
+                                    <p class="hidden text-xs sm:block">per night</p>
+                                    <h5 class="lg:text-2xl">TWD 2,090</h5>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-aos="fade-up"
+                    class="card  mb-1 sm:border-b sm:border-secondary sm:pb-4 sm:mb-4 lg:pb-6 lg:mb-6 group js__card--hover">
+                    <div class="grid grid-cols-8">
+                        <div class="col-span-3">
+                            <div class="card__imgSlick ">
+                                <img class="card__img" src="assets/images/room7.jpg" alt="">
+                                <img class="card__img" src="assets/images/room8.jpg" alt="">
+                                <img class="card__img" src="assets/images/room9.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-span-5">
+                            <div class="relative h-full  py-1 p-2 sm:group-hover:shadow-lg xl:p-4">
+                                <div class="flex flex-col justify-between sm:flex-row">
+                                    <div class="mb-1 sm:mb-2 lg:mb-4">
+                                        <p class="text-xs text-primary">Watana, Bangkok<span
+                                                class=" hidden text-dark xl:inline-flex">・6 km from center</span>
+                                        </p>
+                                        <h3 class="group-hover:underline group-hover:underline-dark lg:text-2xl"><a
+                                                href="room.html" class="hover:text-primary ">Bangkok
+                                                Hostel</a>
+                                        </h3>
+                                    </div>
+                                    <p
+                                        class="inline-flex flex-row text-xs sm:flex-col sm:text-right  lg:text-sm xl:flex-row">
+                                        <span class="material-icons text-lg">
+                                            grade grade grade grade grade
+                                        </span>
+                                        5.0 (102)
+                                    </p>
+
+
+                                </div>
+
+
+                                <p class="text-sm font-bold lg:mb-1">Twin Room</p>
+                                <p class="text-xs mb-2  lg:mb-4">2 guests・2 beds (2 twins)</p>
+                                <ul class=" hidden  flex-col sm:inline-flex lg:flex-row">
+                                    <li class="mb-1 lg:mr-1 lg:mb-0"><a
+                                            class="text-xs  text-dark bg-secondary rounded-full py-1 px-2 hover:text-primary"
+                                            href="">Free
+                                            cancellation</a>
+                                    </li>
+                                    <li><a href=""
+                                            class="text-xs text-dark  bg-secondary rounded-full py-1 px-2 hover:text-primary">No
+                                            prepayment</a>
+                                    </li>
+                                </ul>
+
+                                <div
+                                    class="text-right bottom:1 md:absolute md:right-2 md:bottom-2 lg:right-4 lg:bottom-4">
+                                    <p class="hidden text-xs sm:block">per night</p>
+                                    <h5 class="lg:text-2xl">TWD 880</h5>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-aos="fade-up"
+                    class="card  mb-1 sm:border-b sm:border-secondary sm:pb-4 sm:mb-4 lg:pb-6 lg:mb-6 group js__card--hover">
+                    <div class="grid grid-cols-8">
+                        <div class="col-span-3">
+                            <div class="card__imgSlick ">
+                                <img class="card__img " src="assets/images/room8.jpg" alt="">
+                                <img class="card__img " src="assets/images/room9.jpg" alt="">
+                                <img class="card__img " src="assets/images/room10.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-span-5">
+                            <div class="relative h-full  py-1 p-2 sm:group-hover:shadow-lg xl:p-4">
+                                <div class="flex flex-col justify-between sm:flex-row">
+                                    <div class="mb-1 sm:mb-2 lg:mb-4">
+                                        <p class="text-xs text-primary">Watana, Bangkok<span
+                                                class=" hidden text-dark xl:inline-flex">・6 km from center</span>
+                                        </p>
+                                        <h3 class="group-hover:underline group-hover:underline-dark lg:text-2xl"><a
+                                                href="room.html" class="lhover:text-primary ">Watana First
+                                                Hostel</a>
+                                        </h3>
+                                    </div>
+                                    <p
+                                        class=" inline-flex flex-row mb-1  text-xs sm:flex-col sm:text-right  lg:text-sm xl:flex-row">
+                                        <span class="material-icons text-lg">
+                                            grade grade grade
+                                        </span>
+                                        3.0 (608)
+                                    </p>
+
+
+                                </div>
+
+                                <p class="text-sm font-bold lg:mb-1">Twin Room</p>
+                                <p class="text-xs mb-2  lg:mb-4">2 guests・2 beds (2 twins)</p>
+                                <ul class=" hidden  flex-col sm:inline-flex lg:flex-row">
+                                    <li><a class="text-xs text-dark bg-secondary rounded-full py-1 px-2 hover:text-primary"
+                                            href="">Free cancellation</a>
+                                    </li>
+
+                                </ul>
+
+                                <div
+                                    class="text-right bottom:1 md:absolute md:right-2 md:bottom-2 lg:right-4 lg:bottom-4">
+                                    <p class="hidden text-xs  sm:block  lg:mb-1">per night</p>
+                                    <p class="line-through text-xs   sm:text-sm lg:text-base  lg:mb-1">TWD 1,280
+                                    </p>
+                                    <h5 class="lg:text-2xl">TWD <span class="text-primary">790</span></h5>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-aos="fade-up"
+                    class="card  mb-1 sm:border-b sm:border-secondary sm:pb-4 sm:mb-4 lg:pb-6 lg:mb-6 group js__card--hover">
+                    <div class='grid grid-cols-8'>
+                        <div class="col-span-3">
+                            <div class="card__imgSlick ">
+                                <img class="card__img" src="assets/images/room9.jpg" alt="">
+                                <img class="card__img" src="assets/images/room10.jpg" alt="">
+                                <img class="card__img" src="assets/images/room1.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-span-5">
+                            <div class="relative h-full  py-1 p-2 sm:group-hover:shadow-lg xl:p-4">
+                                <div class="flex flex-col justify-between sm:flex-row">
+                                    <div class="mb-1 sm:mb-2 lg:mb-4">
+                                        <p class="text-xs text-primary">Din Daeng, Bangkok<span
+                                                class="hidden text-dark xl:inline-flex">・7 km from center</span>
+                                        </p>
+                                        <h3 class="group-hover:underline group-hover:underline-dark lg:text-2xl"><a
+                                                href="room.html" class="hover:text-primary ">DD Space</a>
+                                        </h3>
+                                    </div>
+                                    <p
+                                        class="inline-flex flex-row text-xs sm:flex-col sm:text-right  lg:text-sm xl:flex-row">
+                                        <span class="material-icons text-lg">
+                                            grade grade grade grade
+                                        </span>
+                                        4.0 (138)
+                                    </p>
+
+
+                                </div>
+
+                                <p class="text-sm font-bold lg:mb-1">Standard Double Room</p>
+                                <p class="text-xs mb-2  lg:mb-4">2 guests・1 bed (Queen size)</p>
+
+                                <div
+                                    class="text-right bottom:1 md:absolute md:right-2 md:bottom-2 lg:right-4 lg:bottom-4">
+                                    <p class="hidden text-xs  sm:block  lg:mb-1">per night</p>
+                                    <p class="line-through text-xs  sm:text-sm lg:text-base  lg:mb-1">TWD 1,700
+                                    </p>
+                                    <h5 class="lg:text-2xl">TWD <span class="text-primary">1,240</span></h5>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li data-aos="fade-up" class="card  group js__card--hover">
+                    <div class="grid grid-cols-8 ">
+                        <div class="col-span-3">
+                            <div class="card__imgSlick ">
+                                <img class="card__img  " src="assets/images/room10.jpg" alt="">
+                                <img class="card__img  " src="assets/images/room1.jpg" alt="">
+                                <img class="card__img  " src="assets/images/room2.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-span-5">
+                            <div class="relative h-full  py-1 p-2 sm:group-hover:shadow-lg xl:p-4">
+                                <div class="flex flex-col justify-between sm:flex-row">
+                                    <div class="mb-1 sm:mb-2 lg:mb-4">
+                                        <p class="text-xs text-primary">Din Daeng, Bangkok<span
+                                                class="hidden text-dark xl:inline-flex">・7 km from center</span>
+                                        </p>
+                                        <h3 class="group-hover:underline group-hover:underline-dark lg:text-2xl"><a
+                                                href="room.html" class="hover:text-primary ">Dininn Hotel</a>
+                                        </h3>
+                                    </div>
+                                    <p
+                                        class="inline-flex flex-row mb-1  text-xs sm:flex-col sm:text-right  lg:text-sm xl:flex-row">
+                                        <span class="material-icons text-lg">
+                                            grade grade grade
+                                        </span>
+                                        3.0 (446)
+                                    </p>
+
+
+                                </div>
+
+                                <p class="text-sm font-bold lg:mb-1">Deluxe Twin Room</p>
+                                <p class="text-xs mb-2  lg:mb-4">2 guests・2 beds (2 twins)</p>
+
+                                <div
+                                    class="text-right bottom:1 md:absolute md:right-2 md:bottom-2 lg:right-4 lg:bottom-4">
+                                    <p class="hidden text-xs sm:block">per night</p>
+                                    <h5 class="lg:text-2xl">TWD 3,450</h5>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div data-aos="fade-up" class="flex justify-between items-center bg-secondary rounded-lg p-4">
+                <a class="btn btn-sm btn-outline-primary leading-none p-2 lg:px-4" href=""><span
+                        class="material-icons lg:hidden">
+                        keyboard_arrow_left
+                    </span> <span class="hidden lg:block">PREVIOUS</span></a>
+                <ul class="flex ">
+                    <li><a class="font-bold rounded bg-white px-3.5 py-2 hover:text-primary" href="">1</a></li>
+                    <li><a class="font-bold rounded px-3.5 py-2 hover:text-primary hover:bg-gray-200" href="">2</a></li>
+                    <li><a class="hidden font-bold rounded px-3.5 py-2 hover:text-primary hover:bg-gray-200  sm:inline-flex"
+                            href="">3</a></li>
+                    <li><a class="hidden font-bold rounded px-3.5 py-2 hover:text-primary hover:bg-gray-200 lg:inline-flex"
+                            href="">4</a>
+                    </li>
+                    <li><a class="hidden font-bold rounded px-3.5 py-2 hover:text-primary hover:bg-gray-200 lg:inline-flex"
+                            href="">5</a>
+                    </li>
+                    <li><a class="hidden font-bold rounded px-3.5 py-2 hover:text-primary hover:bg-gray-200 lg:inline-flex"
+                            href="">6</a>
+                    </li>
+                    <li><a class="font-bold rounded px-3.5 py-2 " href="">...</a></li>
+                    <li><a class="font-bold rounded px-3.5 py-2 hover:text-primary hover:bg-gray-200" href="">9</a></li>
+                </ul>
+                <a class=" btn btn-sm btn-primary leading-none p-2 lg:px-4" href=""><span
+                        class="material-icons text-white lg:hidden">
+                        keyboard_arrow_right
+                    </span> <span class="hidden lg:block">NEXT</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-secondary py-6">
+    <div class="container ">
+        <div class="grid grid-cols-12 gap-x-col gap-y-4 items-center">
+            <div data-aos="fade-right" class="col-span-12 md:col-span-4 lg:col-span-5">
+                <h3 class="text-2xl text-center md:text-left lg:text-3xl">Subscribe for Exclusive Offer</h3>
+            </div>
+            <div data-aos="fade-left" class="col-span-12 md:col-span-8 lg:col-span-7">
+                <form action="">
+                    <div class="form-inline">
+                        <input type="email" placeholder="Your email address" class="form-control  js-subscribe-input">
+                        <a href="" type="submit" class="btn btn-primary rounded-l-none js-subscribe">SUBSCRIBE</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="alert js-fail js-subscribe-focus">
+    <div class="alert-dialog alert-danger">
+        <div class="alert-header">
+            <p><span class="material-icons alert-icon">
+                    error
+                </span></p>
+            <button class="alert-close ">
+                <span class="material-icons">close</span>
+            </button>
+        </div>
+
+        <p class="alert-text">請輸入您的電子郵件</p>
+        <button class="btn btn-sm btn-danger w-full  js-alert-close">OK</button>
+
+    </div>
+
+</div>
+<div class="alert js-success">
+    <div class="alert-dialog alert-success">
+        <div class="alert-header">
+            <p><span class="material-icons alert-icon">
+                    check_circle
+                </span></p>
+            <button class="alert-close js-alert-close">
+                <span class="material-icons">close</span>
+            </button>
+        </div>
+
+        <p class="alert-text">感謝您的訂閱</p>
+        <button class="btn btn-sm btn-primary w-full js-alert-close">Thank You</button>
+
+    </div>
+
+</div>
+
+
+
+  
+  <footer class="container flex justify-between items-center py-6">
+    <div class="flex  items-center flex-col-reverse justify-between w-full 
+     lg:w-auto md:flex-row ">
+        <p class="text-sm mr-0  md:mr-16 ">© 2020 ALOHA, Inc. All rights reserved.</p>
+        <ul class="flex mb-4 md:mb-0">
+
+            <li class="mr-6"><a href="" class="text-sm text-dark   hover:text-primary">FAQs</a></li>
+            <li class="mr-6"><a href="" class="text-sm text-dark   hover:text-primary">Terms of
+                    use</a></li>
+            <li><a href="" class="text-sm text-dark   hover:text-primary">Privacy policy</a></li>
+        </ul>
+    </div>
+    <div class="hidden items-center lg:flex">
+        <div class=" dropUp  mr-6">
+            <a class="leading-none flex items-center" href="" data-toggle="dropdown">
+                <span class="material-icons mr-2">
+                    language
+                </span>
+                <p class="text-sm">English</p>
+                <span class="material-icons">
+                    arrow_drop_down
+                </span>
+            </a>
+            <div class="dropdown-menu">
+
+                <a class="dropdown-item" href="#">English</a>
+                <a class="dropdown-item" href="#">繁體中文</a>
+                <a class="dropdown-item" href="#">簡體中文</a>
+
+            </div>
+        </div>
+        <div class=" dropUp ">
+            <a class="leading-none flex  items-center" href="" data-toggle="dropdown">
+                <span class="material-icons mr-2">
+                    attach_money
+                </span>
+                <p class="text-sm">TWD</p>
+                <span class="material-icons">
+                    arrow_drop_down
+                </span>
+            </a>
+            <div class="dropdown-menu">
+
+                <a class="dropdown-item" href="#">TWD</a>
+                <a class="dropdown-item" href="#">USD</a>
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+  
+
+
+
+  <script src="./assets/js/vendors.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
