@@ -1,4 +1,4 @@
-/* Slider */
+/* Slider cdn css */
 .slick-slider
 {
     position: relative;
@@ -99,6 +99,8 @@ height: 100%;
     display: none;
 }
 
+
+/* Slider custom  css */
 .slick-prev, .slick-next {
   @apply absolute z-1  w-6 h-6  bg-contain bg-no-repeat bg-center cursor-pointer text-transparent focus:outline-none;
   top: calc(50% - 12px);
@@ -133,13 +135,9 @@ height: 100%;
 }
 .card-slick .slick-next{
   @apply  w-10 h-10 bg-secondary rounded-full;
- 
   background-image: url(../images/black_arrow.svg);
-
   right: 10px;
   top:calc((100% - 100px)/2 );
- 
-
 }
 
 .card__imgSlick .slick-arrow{
