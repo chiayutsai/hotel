@@ -2286,10 +2286,6 @@ label {
   border-width: 1px;
 }
 
-.border-b-0{
-  border-bottom-width: 0px;
-}
-
 .border-b-2{
   border-bottom-width: 2px;
 }
@@ -2480,10 +2476,6 @@ label {
 
 .h-16{
   height: 4rem;
-}
-
-.h-37{
-  height: 150px;
 }
 
 .h-auto{
@@ -3042,10 +3034,6 @@ label {
 
 .w-24{
   width: 6rem;
-}
-
-.w-37{
-  width: 150px;
 }
 
 .w-auto{
@@ -3622,6 +3610,10 @@ label {
     border-width: 0px;
   }
 
+  .md\:border-b{
+    border-bottom-width: 1px;
+  }
+
   .md\:block{
     display: block;
   }
@@ -3878,10 +3870,6 @@ label {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
-  }
-
-  .lg\:h-auto{
-    height: auto;
   }
 
   .lg\:text-sm{
