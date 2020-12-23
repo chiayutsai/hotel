@@ -1812,6 +1812,21 @@ label {
   position: relative;
 }
 
+.card-t-pill {
+  --tw-border-opacity: 1;
+  border-color: rgba(241, 240, 248, var(--tw-border-opacity));
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-width: 1px;
+  overflow: hidden;
+}
+
+@media (min-width: 576px) {
+  .card-t-pill {
+    border-width: 0px;
+  }
+}
+
 .card-pill {
   --tw-border-opacity: 1;
   border-color: rgba(241, 240, 248, var(--tw-border-opacity));
@@ -1820,7 +1835,7 @@ label {
   overflow: hidden;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .card-pill {
     border-top-width: 0px;
     border-right-width: 0px;
@@ -2260,6 +2275,14 @@ label {
 .rounded-t-lg{
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
+}
+
+.rounded-br-lg{
+  border-bottom-right-radius: 0.5rem;
+}
+
+.rounded-bl-lg{
+  border-bottom-left-radius: 0.5rem;
 }
 
 .border-0{
