@@ -2650,6 +2650,11 @@ label {
      object-fit: cover;
 }
 
+.object-fill{
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
 .opacity-0{
   opacity: 0;
 }

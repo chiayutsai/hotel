@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    預約房間
+  </title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  
+  <nav class="navber ">
+    <div class="container flex justify-between items-center">
+        <div class="navbar-toggle" data-toggle="collapse">
+            <div class="navbar-togglebtn">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <h1><a class="navbar-brand" href="index.html">ALOHA</a>
+        </h1>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class=" nav-item dropdown">
+                    <a class="nav-link leading-none " href="#" data-toggle="dropdown">
+                        <span class="material-icons">
+                            language
+                        </span>
+                        <span class="material-icons">
+                            arrow_drop_down
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu">
+
+                        <li class="dropdown-item"> <a href="#">English</a> </li>
+                        <li class="dropdown-item"> <a href="#">繁體中文</a> </li>
+                        <li class="dropdown-item"> <a href="#">簡體中文</a> </li>
+
+                    </ul>
+                </li>
+                <li class="nav-item "><a class="nav-link" href="">Sign up</a></li>
+                <li class="nav-item hidden sm:block"><a class="nav-link" href="login.html">Login</a></li>
+            </ul>
+        </div>
+        <a href="login.html" class="hover:text-primary sm:hidden">Login</a>
+    </div>
+</nav>
+  
+
+
+
+  
+
+<div data-aos="flip-down" class=" container pt-34 sm:pt-39 md:pt-24 min-h-sm  md:min-h-md ">
+    <div class="grid grid-cols-12 gap-col gap-y-0">
+        <div class="col-span-12 md:col-span-6 lg:col-span-4 lg:col-start-3">
+            <h2 class="text-2xl  mb-6 md:text-3xl">Reservation details</h2>
+            <form action="">
+                <div class="form-group">
+                    <label for="Name">Name</label>
+                    <input type="text" id="Name" value="" class="form-control js-reservation-name">
+                </div>
+
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input type="email" id="Email" value="" class="form-control js-reservation-email">
+                </div>
+
+                <div class="form-group mb-6">
+                    <label for="Phone">Phone (optional)</label>
+                    <input type="tel" id="Phone" class="form-control">
+                </div>
+                <a href="" class="w-full btn btn-primary  mb-2 js-formcheck">RESERVE</a>
+                <p class="text-sm text-primary text-center">Reserve now, pay at stay</p>
+            </form>
+        </div>
+        <div class="col-span-12 md:col-span-6 lg:col-span-4">
+            <div class="absolute top-14 sm:top-17 left-0 w-screen  md:w-auto  md:static ">
+                <div class="bg-secondary md:hidden ">
+                    <div class="container flex justify-between items-center border-b border-white py-4">
+                        <p class="text-sm  duration-300 js-reserve-price">Total<span
+                                class="text-black font-bold ml-2">TWD
+                                4,633</span></p>
+                        <a class="text-sm text-primary font-bold js-reservation" href="">DETAIL<span
+                                class="material-icons  duration-300  text-primary js-arrow-rotate">
+                                keyboard_arrow_down
+                            </span> </a>
+                    </div>
+                </div>
+                <div class="hidden bg-secondary p-4 md:p-6 md:rounded-lg md:block js-reservation-list ">
+                    <div class="border-b border-white pb-4 mb-4 md:pb-6 md:mb-6">
+                        <h3 class="mb-4">Booking details</h3>
+                        <ul class="text-dark text-sm">
+                            <li class="mb-2">17 June 2020 - 19 June 2020・2 nights</li>
+                            <li class="mb-2">2 adults・1 room</li>
+                            <li>Rachada Hotel</li>
+                        </ul>
+                    </div>
+                    <div class="border-b border-white  pb-4 mb-4  md:pb-6 md:mb-6">
+                        <h3 class="mb-4">Price summary</h3>
+                        <ul class="text-dark text-sm">
+                            <li class=" flex justify-between mb-2">
+                                <p>Deluxe Suite with Pool</p>
+                                <p>TWD 3,960</p>
+                            </li>
+                            <li class=" flex justify-between mb-2">
+                                <p>VAT (7%)</p>
+                                <p>TWD 277</p>
+                            </li>
+                            <li class="flex justify-between">
+                                <p>Property service charge</p>
+                                <p>TWD 396</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex justify-between">
+                        <p>Total</p>
+                        <p class="text-black font-bold">TWD 4,633</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="alert js-fail  js-formCheck-focus">
+    <div class="alert-dialog alert-danger">
+        <div class="alert-header">
+            <p><span class="material-icons alert-icon">
+                    error
+                </span></p>
+            <button class="alert-close ">
+                <span class="material-icons">close</span>
+            </button>
+        </div>
+
+        <p class="alert-text">請輸入您的姓名和電子郵件</p>
+        <a class="btn btn-sm btn-danger w-full  js-alert-close">OK</a>
+
+    </div>
+
+</div>
+
+
+
+  
+  <footer class="container ">
+    <div class="grid grid-cols-12 gap-x-col gap-y-0 items-center   ">
+        <div class="col-span-12 lg:col-span-8 lg:col-start-3">
+            <div class="border-t border-secondary"></div>
+        </div>
+        <div class="col-span-12 order-1   md:col-span-6 lg:col-span-4 lg:col-start-3   md:order-none mb-6 md:mb-0">
+            <p class="text-sm text-center  md:text-left ">© 2020 ALOHA, Inc. All rights reserved.
+            </p>
+        </div>
+        <div class="col-span-12  md:col-span-6 lg:col-span-4">
+            <ul class="flex justify-center md:justify-end">
+
+                <li class="mr-6"><a href="" class="text-sm text-dark  hover:text-primary pt-6 pb-4 md:pb-6">FAQs</a>
+                </li>
+                <li class="mr-6"><a href="" class="text-sm text-dark  hover:text-primary pt-6 pb-4 md:pb-6">Terms of
+                        use</a></li>
+                <li><a href="" class="text-sm text-dark  hover:text-primary pt-6 pb-4 md:pb-6">Privacy policy</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+  
+
+
+
+  <script src="./assets/js/vendors.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
