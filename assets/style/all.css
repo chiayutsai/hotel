@@ -1195,7 +1195,7 @@ label {
   -webkit-transition-duration: 300ms;
        -o-transition-duration: 300ms;
           transition-duration: 300ms;
-  top: calc((100% - 40px)/2 + 20px);
+  top: calc((100% - 40px)/2 + 10px);
 }
 
 @media (min-width: 576px) {
@@ -2648,11 +2648,6 @@ label {
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.object-fill{
-  -o-object-fit: fill;
-     object-fit: fill;
 }
 
 .opacity-0{
