@@ -1,11 +1,15 @@
 .card{
     @apply flex flex-col relative  bg-white ;
 }
-.card-pill{
-    @apply rounded-lg border border-secondary overflow-hidden;
+.card--topPill{
+    @apply rounded-t-lg border border-secondary overflow-hidden;
     @screen sm{
-        @apply border-t-0 border-l-0 border-r-0;
+        @apply border-0;
     }
+}
+.card--pill{
+    @apply rounded-lg   overflow-hidden;
+  
 }
 .card__img{
     @apply  w-full  h-full;
@@ -21,7 +25,7 @@
 .card__body{
     @apply flex-auto;
 }
-.card-img-overlay{
+.card--imgOverLay{
    @apply absolute top-0 left-0 w-full rounded-lg h-full py-4 px-6;
    background: transparent linear-gradient(270deg, #00000000 0%, #000000 100%) 0% 0%;
 }
@@ -30,3 +34,33 @@
   @apply flex items-center mb-2;
 }
 
+.card__slick--noarrow .slick-list,.card__slick  .slick-list{
+    padding-left: 0 !important;
+  }
+  
+  .card__slick .slick-prev{
+    display: none !important;
+  }
+  .card__slick .slick-next{
+    @apply  w-10 h-10 bg-secondary rounded-full;
+    background-image: url(../images/black_arrow.svg);
+    right: 10px;
+    top:calc((100% - 100px)/2 );
+  }
+  
+  .card__imgSlick .slick-arrow{
+    @apply  w-5 h-5 rounded-full bg-secondary opacity-0 duration-300;
+    @screen sm{
+      @apply  w-8 h-8;
+    }
+    top:calc((100% - 40px)/2 + 10px);
+  }
+  
+  .card__imgSlick .slick-next{
+    background-image: url(../images/black_arrow.svg);
+    right: 10px;
+  }
+  .card__imgSlick .slick-prev{
+    background-image: url(../images/black_prev.svg);
+    left: 10px;
+  }

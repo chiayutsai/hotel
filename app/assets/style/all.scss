@@ -12,14 +12,14 @@
 @layer utilities{
 @import 'helpers/text';
 }
-
+@import './vendors/daterangepicker';
+@import './vendors/slick';
 
 @layer components{
 @import './component/navbar';
 @import './component/dropdown';
 @import './component/slick';
 @import './component/form';
-@import './component/daterangepicker';
 @import './component/card';
 @import './component/button';
 @import './component/alert';

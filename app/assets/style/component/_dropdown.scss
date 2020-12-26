@@ -2,16 +2,16 @@
 .dropdown,.dropUp{
     @apply relative;
 }
-.dropdown-menu{
+.dropdown__menu{
     @apply hidden absolute left-0 z-1 w-full  rounded shadow bg-white border border-gray-200;
      min-width: 5rem;
 }
 .dropUp{
-    .dropdown-menu{
+    .dropdown__menu{
         @apply bottom-full left-auto right-0;
     }
 }
-.dropdown-item{
+.dropdown__item{
     @apply text-sm  px-2 py-2 text-left cursor-pointer lg:px-4 lg:text-base hover:bg-secondary hover:text-primary;
    p{
       @apply text-black 

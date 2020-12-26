@@ -3,7 +3,7 @@
   @apply fixed top-0 z-4 w-full  bg-white  py-4  sm:py-3;
 }
 .navbar-brand{
-  @apply w-24 h-6 overflow-hidden bg-logo bg-no-repeat bg-contain whitespace-nowrap text-indent-101 ;
+  @apply w-24 h-6 overflow-hidden bg-logo bg-no-repeat bg-contain whitespace-nowrap text-indent-xl ;
 }
 .navbar-collapse{
   @apply absolute z-2 top-14 left-0 w-full bg-secondary h-0 duration-500 overflow-hidden;

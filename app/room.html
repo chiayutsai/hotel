@@ -25,8 +25,8 @@ footer: normal
                     </div>
 
                 </a>
-                <ul class="dropdown-menu w-full shadow-sm mt-2">
-                    <li class="dropdown-item flex js-country">
+                <ul class="dropdown__menu w-full shadow-sm mt-2">
+                    <li class="dropdown__item flex js-country">
                         <p class="mr-2"><span class="material-icons">
                                 grade
                             </span></p>
@@ -36,7 +36,7 @@ footer: normal
                         </p>
 
                     </li>
-                    <li class="dropdown-item flex js-country">
+                    <li class="dropdown__item flex js-country">
                         <p class="mr-2"><span class="material-icons">
                                 grade
                             </span></p>
@@ -45,7 +45,7 @@ footer: normal
                         </p>
 
                     </li>
-                    <li class="dropdown-item flex js-country">
+                    <li class="dropdown__item flex js-country">
                         <p class="mr-2"><span class="material-icons">
                                 grade
                             </span></p>
@@ -54,7 +54,7 @@ footer: normal
                         </p>
 
                     </li>
-                    <li class="dropdown-item flex js-country">
+                    <li class="dropdown__item flex js-country">
                         <p class="mr-2"><span class="material-icons">
                                 grade
                             </span></p>
@@ -63,7 +63,7 @@ footer: normal
                         </p>
 
                     </li>
-                    <li class="dropdown-item flex js-country">
+                    <li class="dropdown__item flex js-country">
                         <p class="mr-2"><span class="material-icons">
                                 grade
                             </span></p>
@@ -105,8 +105,8 @@ footer: normal
                     </div>
 
                 </a>
-                <ul class="dropdown-menu js-quantity-menu  mt-2">
-                    <li class="dropdown-item flex  flex-col  justify-between items-center  py-4 md:flex-row">
+                <ul class="dropdown__menu js-quantity-menu  mt-2">
+                    <li class="dropdown__item flex  flex-col  justify-between items-center  py-4 md:flex-row">
                         <p>Adult</p>
                         <div class="form-quantity">
                             <button class="quantity-btn js-minus js-form-quantity"><span class="material-icons">
@@ -121,7 +121,7 @@ footer: normal
                         </div>
 
                     </li>
-                    <li class="dropdown-item flex  flex-col   justify-between items-center  py-4  md:flex-row">
+                    <li class="dropdown__item flex  flex-col   justify-between items-center  py-4  md:flex-row">
                         <p>Child</p>
                         <div class="form-quantity">
                             <button class="quantity-btn js-minus js-form-quantity"><span class="material-icons">
@@ -137,7 +137,7 @@ footer: normal
 
                     </li>
                     <li
-                        class="dropdown-item quantity-item flex flex-col justify-between items-center py-4  md:flex-row">
+                        class="dropdown__item quantity-item flex flex-col justify-between items-center py-4  md:flex-row">
                         <p>Room</p>
                         <div class="form-quantity">
                             <button class="quantity-btn js-minus js-form-quantity"><span class="material-icons">
@@ -161,7 +161,7 @@ footer: normal
 </div>
 
 <div class="container">
-    <div class="room-slick grid-cols-12 grid-rows-2 gap-1 -mx-3.8
+    <div class="slick--hCustom grid-cols-12 grid-rows-2 gap-1 -mx-3.8
  mb-4 sm:grid sm:mx-0 sm:mb-6 lg:gap-2 ">
         <div data-aos="flip-left" class="col-span-7 row-span-2"><img class="w-full h-full sm:rounded"
                 src="assets/images/inner1.jpg" alt="">
@@ -226,7 +226,7 @@ footer: normal
         <li data-aos="fade-up"
             class="grid grid-cols-12 items-center border-secondary mb-2 sm:border-b  sm:mb-5 sm:pb-4 lg:pb-6">
             <div class="col-span-12 sm:col-span-6">
-                <div class="card card-t-pill">
+                <div class="card card--topPill">
                     <div class=" grid grid-cols-6 ">
                         <div class="col-span-3">
                             <img class="card__img " src="assets/images/roomA.jpg" alt="">
@@ -300,7 +300,7 @@ footer: normal
         <li data-aos="fade-up"
             class="grid grid-cols-12 items-center border-secondary mb-2 sm:border-b  sm:mb-5 sm:pb-4 lg:pb-6">
             <div class="col-span-12 sm:col-span-6">
-                <div class="card card-t-pill">
+                <div class="card card--topPill">
                     <div class=" grid grid-cols-6">
                         <div class="col-span-3">
                             <img class="card__img " src="assets/images/roomB.jpg" alt="">
@@ -371,7 +371,7 @@ footer: normal
         </li>
         <li data-aos="fade-up" class="grid grid-cols-12 items-center ">
             <div class="col-span-12 sm:col-span-6">
-                <div class="card card-t-pill">
+                <div class="card card--topPill">
                     <div class=" grid grid-cols-6">
                         <div class="col-span-3 ">
                             <img class="card__img " src="assets/images/roomC.jpg" alt="">
@@ -476,12 +476,12 @@ footer: normal
 
 
 <div class="alert js-fail js-subscribe-focus">
-    <div class="alert-dialog alert-danger">
-        <div class="alert-header">
-            <p><span class="material-icons alert-icon">
+    <div class="alert__dialog alert--danger">
+        <div class="alert__header">
+            <p><span class="material-icons alert--icon">
                     error
                 </span></p>
-            <button class="alert-close ">
+            <button class="alert--close ">
                 <span class="material-icons">close</span>
             </button>
         </div>
@@ -493,17 +493,17 @@ footer: normal
 
 </div>
 <div class="alert js-success">
-    <div class="alert-dialog alert-success">
-        <div class="alert-header">
-            <p><span class="material-icons alert-icon">
+    <div class="alert__dialog alert--success">
+        <div class="alert__header">
+            <p><span class="material-icons alert--icon">
                     check_circle
                 </span></p>
-            <button class="alert-close js-alert-close">
+            <button class="alert--close js-alert-close">
                 <span class="material-icons">close</span>
             </button>
         </div>
 
-        <p class="alert-text">感謝您的訂閱</p>
+        <p class="alert__text">感謝您的訂閱</p>
         <a class="btn btn-sm btn-primary w-full js-alert-close">Thank You</a>
 
     </div>

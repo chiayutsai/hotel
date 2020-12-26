@@ -1,47 +1,44 @@
-.alert-open{
+.alert--open{
     @apply overflow-hidden;
 }
 .alert{
     @apply  fixed z-5 top-0 w-full h-screen flex items-center justify-center bg-dark overflow-hidden;
 }
-.alert-dialog{
+.alert__dialog{
     @apply relative  bg-white p-4 rounded-lg;
     min-width:300px;
-  
 }
-.alert-header{
+.alert__header{
     @apply  flex justify-between pb-4 mb-4;
 }
-
-
-.alert-text{
+.alert__text{
     @apply text-black mb-4;
 }
-.alert-danger{
+.alert--danger{
     @apply border-2  border-red-600;
-    .alert-header{
+    .alert__header{
         @apply border-b border-red-100;
     }
-    .alert-icon{
+    .alert--icon{
         @apply text-red-600;
     }
 
-    .alert-close{
+    .alert--close{
         span{
         @apply text-red-300;
         }
     }
 }
-.alert-success{
+.alert--success{
     @apply border-2  border-primary;
-    .alert-header{
+    .alert__header{
         @apply border-b border-secondary;
     }
-    .alert-icon{
+    .alert--icon{
         @apply text-primary;
     }
 
-    .alert-close{
+    .alert--close{
         span{
         @apply text-purple-400;
         }

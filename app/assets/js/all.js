@@ -9,14 +9,14 @@ $(document).ready(function () {
     });
     $('[data-toggle="dropdown"]').click(function (e) {
         e.preventDefault();
-        $(this).next('.dropdown-menu').slideToggle();
+        $(this).next('.dropdown__menu').slideToggle();
 
     });
-    $('.dropdown-item').click(function () {
-        $(this).parent(".dropdown-menu:not('.js-quantity-menu')").slideUp()
+    $('.dropdown__item').click(function () {
+        $(this).parent(".dropdown__menu:not('.js-quantity-menu')").slideUp()
     });
     $(window).click(function () {
-        $('.dropdown-menu').slideUp();
+        $('.dropdown__menu').slideUp();
 
     });
 
@@ -200,18 +200,18 @@ $(document).ready(function () {
     /*form check*/
     $('.js-alert-close').click(function () {
         $('.alert').fadeOut();
-        $('body').removeClass('alert-open')
+        $('body').removeClass('alert--open')
 
     })
     $('.alert').click(function () {
         $('.alert').fadeOut();
-        $('body').removeClass('alert-open')
+        $('body').removeClass('alert--open')
 
     });
 
     $('.js-subscribe').click(function (e) {
         e.preventDefault();
-        $('body').addClass('alert-open')
+        $('body').addClass('alert--open')
         let email = $('.js-subscribe-input').val();
         if (email == '') {
             $('.js-fail').fadeIn();
@@ -233,7 +233,7 @@ $(document).ready(function () {
         let name = $('.js-reservation-name').val();
         let email = $('.js-reservation-email').val();
         if (name == '' || email == '') {
-            $('body').addClass('alert-open')
+            $('body').addClass('alert--open')
             $('.js-fail').fadeIn();
         } else {
             window.location.href = "success.html"
@@ -261,7 +261,7 @@ $(document).ready(function () {
         let password = $('.js-login-password').val();
         let email = $('.js-login-email').val();
         if (password == '' || email == '') {
-            $('body').addClass('alert-open')
+            $('body').addClass('alert--open')
             $('.js-fail').fadeIn();
         } else {
             window.location.href = "member.html"
@@ -302,7 +302,7 @@ $(document).ready(function () {
         arrows: true,
         autoplay: true,
     });
-    $('.card-slick').slick({
+    $('.card__slick').slick({
         slidesToShow: 4,
         arrows: true,
 
@@ -328,7 +328,7 @@ $(document).ready(function () {
                 }
             }]
     });
-    $('.card-noarrow-slick').slick({
+    $('.card__slick--noarrow').slick({
         slidesToShow: 3,
         arrows: false,
 
