@@ -3,9 +3,9 @@ $(document).ready(function () {
     let wdth = $(window).width();
 
 
-    $('.navbar-togglebtn').click(function () {
+    $('.navbar__togglebtn').click(function () {
         $(this).toggleClass('open');
-        $('.navbar-collapse').toggleClass('open');
+        $('.navbar__collapse').toggleClass('open');
     });
     $('[data-toggle="dropdown"]').click(function (e) {
         e.preventDefault();
